@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jusam Medical Clinic | Level 2 Healthcare in Ramisi Ward, Kwale County</title>
+    <meta name="description" content="Jusam Medical Clinic is a Level 2 health facility in Ramisi Ward, Kwale County. Outpatient care, antenatal and maternity support, hypertension clinic, on-site laboratory tests and home-based care.">
+    <meta name="theme-color" content="#0A3D3F">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jusam Medical Clinic | Ramisi Ward, Kwale County">
+    <meta property="og:description" content="Outpatient, maternity, chronic illness care, lab tests and home visits in Ramisi Ward.">
+    <!-- When the site is live, add: <meta property="og:image" content="https://YOUR-DOMAIN/jusam.jpg"> -->
+    <link rel="icon" href="jusam.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Apply the Tailwind theme only once Tailwind has loaded. If the first load failed
+        // (slow network, ad blocker), retry once instead of crashing with "tailwind is not defined".
+        (function () {
+            var config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mangrove: { DEFAULT: '#0A3D3F', deep: '#062B2D' },
+                        lagoon: { DEFAULT: '#0E7C7B', dark: '#0A5F5E' },
+                        tide: '#6FD6C8',
+                        mist: '#EEF7F5',
+                        sun: { DEFAULT: '#F0B44C', dark: '#D99A2E' },
+                        ink: '#0B2224',
+                        coral: '#E4694F'
+                    },
+                    fontFamily: {
+                        display: ['Fraunces', 'Georgia', 'serif'],
+                        sans: ['Figtree', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
+            function apply() {
+                if (window.tailwind) { window.tailwind.config = config; return true; }
+                return false;
+            }
+            if (apply()) return;
+            var retry = document.createElement('script');
+            retry.src = 'https://cdn.tailwindcss.com/?retry=1';
+            retry.onload = apply;
+            document.head.appendChild(retry);
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    if (window.tailwind) return;
+                    var note = document.createElement('div');
+                    note.setAttribute('role', 'alert');
+                    note.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:100000;background:#F0B44C;color:#062B2D;font:600 14px system-ui,sans-serif;padding:10px 16px;text-align:center';
+                    note.textContent = 'The page styles could not load. Check your internet connection or turn off any ad blocker, then refresh.';
+                    document.body.appendChild(note);
+                }, 1500);
+            });
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Jusam Medical Clinic",
+      "identifier": "MFL 34670",
+      "telephone": "+254707383616",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ramisi",
+        "addressRegion": "Kwale County",
+        "addressCountry": "KE"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }]
+    }
+    </script>
+
+    <style>
+        :root {
+            --mangrove: #0A3D3F;
+            --deep: #062B2D;
+            --lagoon: #0E7C7B;
+            --tide: #6FD6C8;
+            --mist: #EEF7F5;
+            --sun: #F0B44C;
+            --ink: #0B2224;
+        }
+        html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+        body { font-family: 'Figtree', system-ui, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+        .font-display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; letter-spacing: -0.02em; }
+        :focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 6px; }
+
+        .skip-link { position: absolute; left: -999px; top: 8px; z-index: 10002; background: #fff; color: var(--ink); padding: .6rem 1rem; border-radius: .6rem; font-weight: 700; }
+        .skip-link:focus { left: 8px; }
+
+        /* ---------- Intro splash ---------- */
+        #splash { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; background: var(--deep); transition: opacity .7s ease, visibility .7s ease; }
+        #splash.is-hidden { opacity: 0; visibility: hidden; }
+        .splash-ecg { stroke-dasharray: 400; stroke-dashoffset: 400; animation: splashDraw 1.4s ease-out .2s forwards; }
+        @keyframes splashDraw { to { stroke-dashoffset: 0; } }
+
+        /* ---------- Hero ---------- */
+        .hero-bg {
+            background:
+                radial-gradient(70% 90% at 92% 0%, rgba(111, 214, 200, .20), transparent 60%),
+                linear-gradient(165deg, #0A3D3F 0%, #062B2D 100%);
+        }
+        .hero-in { opacity: 0; transform: translateY(16px); animation: heroIn .9s cubic-bezier(.2, .7, .2, 1) forwards; }
+        .hero-in:nth-child(1) { animation-delay: .25s; }
+        .hero-in:nth-child(2) { animation-delay: .4s; }
+        .hero-in:nth-child(3) { animation-delay: .55s; }
+        .hero-in:nth-child(4) { animation-delay: .7s; }
+        @keyframes heroIn { to { opacity: 1; transform: none; } }
+
+        /* Video-card scene */
+        .sun-rise { animation: sunrise 3.2s cubic-bezier(.2, .7, .2, 1) .3s both; }
+        @keyframes sunrise { from { transform: translateY(70px); } to { transform: translateY(0); } }
+        .sun-glow { animation: glowPulse 5s ease-in-out infinite; }
+        @keyframes glowPulse { 50% { opacity: .55; } }
+        .wave { animation: drift linear infinite; }
+        .wave-1 { animation-duration: 14s; }
+        .wave-2 { animation-duration: 10s; animation-direction: reverse; }
+        .wave-3 { animation-duration: 7s; }
+        @keyframes drift { to { transform: translateX(-200px); } }
+        .sail { animation: sail 30s linear infinite; }
+        @keyframes sail { from { transform: translateX(-90px); } to { transform: translateX(720px); } }
+        .bob { transform-origin: 30px 14px; animation: bob 4.5s ease-in-out infinite; }
+        @keyframes bob { 0%, 100% { transform: rotate(-3deg) translateY(0); } 50% { transform: rotate(3deg) translateY(-3px); } }
+        .ecg-line { stroke-dasharray: 1000; animation: ecgDraw 6s ease-in-out infinite; }
+        @keyframes ecgDraw { 0% { stroke-dashoffset: 1000; } 45%, 70% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1000; } }
+
+        .play-btn { position: relative; width: 84px; height: 84px; border-radius: 50%; background: rgba(255, 255, 255, .96); color: var(--mangrove); display: grid; place-items: center; font-size: 1.6rem; padding-left: 5px; transition: transform .25s ease; }
+        .play-btn::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .75); animation: ringOut 2.4s ease-out infinite; }
+        @keyframes ringOut { to { transform: scale(1.7); opacity: 0; } }
+        .video-card:hover .play-btn { transform: scale(1.08); }
+
+        /* ---------- Navigation ---------- */
+        .nav-link { position: relative; padding: .25rem 0; transition: color .2s; }
+        .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--lagoon); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+        .nav-link:hover, .nav-link.is-active { color: var(--lagoon); }
+        .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+
+        .status-dot { width: 9px; height: 9px; border-radius: 50%; background: #94a3b8; display: inline-block; flex: none; }
+        .status-dot.is-open { background: #34d399; box-shadow: 0 0 0 0 rgba(52, 211, 153, .6); animation: statusPulse 2s infinite; }
+        .status-dot.is-closed { background: var(--sun); }
+        @keyframes statusPulse { 70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); } 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); } }
+
+        /* ---------- Tabs ---------- */
+        .svc-tab { display: flex; align-items: center; gap: .9rem; width: 100%; text-align: left; padding: .95rem 1.1rem; border-radius: 1rem; border: 1px solid transparent; font-weight: 700; color: #3c5556; transition: background .2s, border-color .2s, color .2s, box-shadow .2s; }
+        .svc-tab:hover { background: rgba(255, 255, 255, .7); }
+        .svc-tab .ico { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: .8rem; background: #fff; color: var(--lagoon); flex: none; transition: background .2s, color .2s; }
+        .svc-tab[aria-selected="true"] { background: #fff; border-color: rgba(14, 124, 123, .3); color: var(--mangrove); box-shadow: 0 16px 34px -18px rgba(10, 61, 63, .45); }
+        .svc-tab[aria-selected="true"] .ico { background: var(--lagoon); color: #fff; }
+        .panel-in { animation: panelIn .35s ease both; }
+        @keyframes panelIn { from { opacity: 0; transform: translateY(8px); } }
+
+        .tool-tab { padding: .7rem 1.2rem; border-radius: 999px; font-weight: 700; font-size: .92rem; color: #3c5556; background: transparent; transition: background .2s, color .2s; }
+        .tool-tab[aria-selected="true"] { background: var(--mangrove); color: #fff; }
+
+        /* ---------- Forms & tools ---------- */
+        .lbl { display: block; font-size: .82rem; font-weight: 700; margin-bottom: .4rem; color: #26484a; }
+        .field { width: 100%; padding: .85rem 1rem; border-radius: .85rem; border: 1px solid #c9dcd9; background: #fff; font-size: .95rem; color: var(--ink); transition: border-color .2s, box-shadow .2s; }
+        .field:focus { outline: none; border-color: var(--lagoon); box-shadow: 0 0 0 3px rgba(14, 124, 123, .18); }
+        .bmi-scale { position: relative; height: 10px; border-radius: 999px; background: linear-gradient(90deg, #7FB7D9 0 14%, #4CB58A 14% 40%, #F0B44C 40% 60%, #E4694F 60% 100%); }
+        .bmi-marker { position: absolute; top: 50%; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 4px solid var(--mangrove); transform: translate(-50%, -50%); transition: left .6s cubic-bezier(.2, .7, .2, 1); left: 0; box-shadow: 0 4px 10px rgba(0, 0, 0, .25); }
+
+        details.faq { border-bottom: 1px solid #d3e4e1; }
+        details.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.3rem 0; font-weight: 700; font-size: 1.05rem; color: var(--mangrove); }
+        details.faq summary::-webkit-details-marker { display: none; }
+        details.faq .chev { flex: none; color: var(--lagoon); transition: transform .25s ease; }
+        details.faq[open] .chev { transform: rotate(45deg); }
+        details.faq .ans { padding: 0 0 1.4rem; color: #3c5556; max-width: 65ch; line-height: 1.75; }
+
+        /* ---------- Floating buttons ---------- */
+        .wa-float { position: fixed; right: 20px; bottom: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 9999; display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+        .wa-label { background: #fff; color: var(--ink); font-weight: 700; font-size: .85rem; padding: .6rem 1rem; border-radius: 999px; box-shadow: 0 12px 30px -8px rgba(0, 0, 0, .35); }
+        .wa-btn { position: relative; width: 62px; height: 62px; border-radius: 50%; background: #25D366; color: #fff; display: grid; place-items: center; font-size: 2rem; box-shadow: 0 14px 30px -8px rgba(37, 211, 102, .75); transition: transform .2s; }
+        .wa-btn::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #25D366; animation: waPulse 2.4s ease-out infinite; z-index: -1; }
+        .wa-float:hover .wa-btn { transform: scale(1.06); }
+        @keyframes waPulse { 0% { transform: scale(1); opacity: .55; } 100% { transform: scale(1.7); opacity: 0; } }
+        @media (max-width: 639px) { .wa-label { display: none; } .wa-float { right: 16px; } }
+
+        #to-top { position: fixed; left: 20px; bottom: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 9998; width: 46px; height: 46px; border-radius: 50%; background: var(--mangrove); color: #fff; display: grid; place-items: center; box-shadow: 0 10px 24px -8px rgba(0, 0, 0, .4); opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .25s, transform .25s, background .2s; }
+        #to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+        #to-top:hover { background: var(--lagoon); }
+
+        /* ---------- Story reel (animated film) ---------- */
+        #story-modal { position: fixed; inset: 0; z-index: 10001; display: none; align-items: center; justify-content: center; padding: 1rem; background: rgba(3, 20, 21, .9); backdrop-filter: blur(6px); }
+        #story-modal.open { display: flex; }
+        .reel { position: relative; width: 100%; max-width: 960px; border-radius: 1.5rem; overflow: hidden; background: var(--deep); aspect-ratio: 9 / 13; max-height: calc(100vh - 2rem); box-shadow: 0 40px 120px -20px rgba(0, 0, 0, .7); color: #fff; }
+        @media (min-width: 700px) { .reel { aspect-ratio: 16 / 9; } }
+        .reel-scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .8s ease, visibility .8s; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.75rem 1.5rem 5.5rem; }
+        @media (min-width: 700px) { .reel-scene { padding: 3rem 3.5rem 6rem; } }
+        .reel-scene.active { opacity: 1; visibility: visible; }
+        .reel-scene .rt { opacity: 0; }
+        .reel-scene.active .rt { animation: rIn .8s cubic-bezier(.2, .7, .2, 1) both; }
+        .reel-scene.active .rt:nth-child(2) { animation-delay: .1s; }
+        .reel-scene.active .rt:nth-child(3) { animation-delay: .25s; }
+        .reel-scene.active .rt:nth-child(4) { animation-delay: .4s; }
+        @keyframes rIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+        .reel-ring { position: absolute; top: 2.6rem; right: 1.6rem; width: 88px; height: 88px; border-radius: 50%; display: grid; place-items: center; font-size: 2.2rem; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .3); }
+        .reel-ring::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .5); animation: ringOut 2.6s ease-out infinite; }
+        @media (min-width: 700px) { .reel-ring { top: 3.4rem; right: 3.5rem; width: 132px; height: 132px; font-size: 3.2rem; } }
+        .reel-title { font-family: 'Fraunces', Georgia, serif; font-size: 2rem; line-height: 1.08; letter-spacing: -.02em; max-width: 16ch; }
+        @media (min-width: 700px) { .reel-title { font-size: 3.2rem; max-width: 20ch; } }
+        .reel-text { margin-top: .9rem; font-size: 1.02rem; line-height: 1.6; color: rgba(255, 255, 255, .82); max-width: 44ch; }
+        @media (min-width: 700px) { .reel-text { font-size: 1.15rem; } }
+        .reel-cta { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1.4rem; margin-right: .6rem; padding: .85rem 1.4rem; border-radius: 999px; font-weight: 800; font-size: .95rem; }
+        .reel-segs { position: absolute; top: 14px; left: 14px; right: 14px; display: flex; gap: 6px; z-index: 5; }
+        .seg { flex: 1; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, .28); overflow: hidden; }
+        .seg i { display: block; height: 100%; width: 0; background: #fff; }
+        .reel-ctrl { position: absolute; left: 0; right: 0; bottom: 0; z-index: 5; display: flex; align-items: center; gap: .5rem; padding: .9rem 1.1rem; }
+        .reel-btn { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .14); color: #fff; transition: background .2s; }
+        .reel-btn:hover { background: rgba(255, 255, 255, .28); }
+        #story-close { position: fixed; top: 14px; right: 14px; z-index: 10003; width: 46px; height: 46px; border-radius: 50%; background: rgba(255, 255, 255, .16); color: #fff; display: grid; place-items: center; font-size: 1.1rem; }
+        #story-close:hover { background: rgba(255, 255, 255, .3); }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+            html { scroll-behavior: auto; }
+            .hero-in { opacity: 1; transform: none; }
+            .ecg-line { stroke-dashoffset: 0; }
+        }
+    </style>
+    <noscript><style>#splash { display: none; } .hero-in { opacity: 1; transform: none; }</style></noscript>
+</head>
+
+<body class="bg-white text-ink antialiased selection:bg-lagoon selection:text-white">
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Intro splash (shows once per visit) -->
+    <div id="splash" role="presentation">
+        <div class="text-center">
+            <span class="relative mx-auto grid h-24 w-24 place-items-center overflow-hidden rounded-full bg-lagoon ring-4 ring-white/15">
+                <b class="font-display text-4xl text-white">J</b>
+                <img src="jusam.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'">
+            </span>
+            <p class="font-display mt-5 text-2xl text-white">Jusam Medical Clinic</p>
+            <svg class="mx-auto mt-3" width="220" height="40" viewBox="0 0 220 40" fill="none" aria-hidden="true">
+                <path class="splash-ecg" pathLength="400" d="M0 20 H70 l8 -6 l8 6 H110 l6 6 l10 -26 l10 34 l6 -14 H180 q10 -12 20 0 H220" stroke="#6FD6C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+    <script>try { if (sessionStorage.getItem('jusamSplash')) document.getElementById('splash').style.display = 'none'; } catch (e) {}</script>
+
+    <!-- Top bar -->
+    <div class="bg-mangrove-deep text-[13px] text-white/80">
+        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-2 sm:px-6 lg:px-8">
+            <p class="flex items-center gap-2 font-semibold text-white"><span class="status-dot" data-status-dot></span><span data-status-text>Checking opening hours</span></p>
+            <p class="hidden md:block">MFL code 34670. SHA empanelment in progress.</p>
+            <a href="tel:+254707383616" class="font-semibold text-white hover:text-tide"><i class="fa-solid fa-phone mr-1.5 text-tide"></i>+254 707 383616</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="site-header" class="sticky top-0 z-40 border-b border-black/5 bg-white/90 backdrop-blur-lg transition-shadow">
+        <div class="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+            <a href="#top" class="flex items-center gap-3" aria-label="Jusam Medical Clinic, back to top">
+                <span class="relative grid h-12 w-12 flex-none place-items-center overflow-hidden rounded-full bg-mist ring-2 ring-lagoon/20">
+                    <b class="font-display text-xl text-lagoon">J</b>
+                    <img src="jusam.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'">
+                </span>
+                <span class="leading-none">
+                    <span class="font-display block text-xl font-semibold text-mangrove">Jusam Medical Clinic</span>
+                    <span class="mt-1 block text-xs font-semibold text-lagoon">Level 2 health facility, Ramisi Ward</span>
+                </span>
+            </a>
+
+            <nav aria-label="Main" class="hidden items-center gap-6 text-sm font-semibold text-slate-600 xl:flex">
+                <a href="#about" class="nav-link">Our story</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#homecare" class="nav-link">Home care</a>
+                <a href="#lab" class="nav-link">Lab tests</a>
+                <a href="#tools" class="nav-link">Health tools</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <a href="tel:+254707383616" class="hidden items-center gap-2 rounded-full border border-slate-200 px-4 py-2.5 text-sm font-bold text-mangrove hover:border-lagoon hover:text-lagoon md:inline-flex"><i class="fa-solid fa-phone"></i> Call</a>
+                <a href="#contact" class="hidden rounded-full bg-mangrove px-5 py-2.5 text-sm font-bold text-white transition hover:bg-lagoon sm:inline-flex">Book appointment</a>
+                <button id="menu-btn" type="button" class="grid h-11 w-11 place-items-center rounded-full text-mangrove hover:bg-mist xl:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="progress" class="absolute bottom-0 left-0 h-[3px] w-full origin-left bg-gradient-to-r from-lagoon to-sun" style="transform:scaleX(0)" aria-hidden="true"></div>
+
+        <div id="mobile-menu" class="hidden border-t border-black/5 bg-white px-5 pb-6 pt-3 xl:hidden">
+            <nav aria-label="Mobile" class="flex flex-col text-base font-semibold text-slate-700">
+                <a href="#about" class="mobile-link border-b border-slate-100 py-3">Our story</a>
+                <a href="#services" class="mobile-link border-b border-slate-100 py-3">Services</a>
+                <a href="#homecare" class="mobile-link border-b border-slate-100 py-3">Home care</a>
+                <a href="#lab" class="mobile-link border-b border-slate-100 py-3">Lab tests</a>
+                <a href="#tools" class="mobile-link border-b border-slate-100 py-3">Health tools</a>
+                <a href="#faq" class="mobile-link border-b border-slate-100 py-3">FAQ</a>
+                <a href="#contact" class="mobile-link py-3">Contact and location</a>
+            </nav>
+            <a href="#contact" class="mobile-link mt-3 block rounded-full bg-mangrove py-3.5 text-center font-bold text-white">Book appointment</a>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- Hero -->
+        <section id="top" class="hero-bg relative isolate overflow-hidden text-white">
+            <canvas id="ecg-bg" class="absolute inset-0 -z-10 h-full w-full" aria-hidden="true"></canvas>
+            <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-32 pt-14 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8 lg:pb-40 lg:pt-24">
+                <div class="lg:col-span-6">
+                    <h1 class="hero-in font-display text-[2.6rem] font-semibold leading-[1.05] sm:text-5xl lg:text-[3.7rem]">Trusted healthcare for Ramisi, at the clinic or at your door.</h1>
+                    <p class="hero-in mt-6 max-w-xl text-lg leading-relaxed text-white/80">Jusam Medical Clinic is a Level 2 health facility in Ramisi Ward, Kwale County. We offer outpatient care, antenatal and maternity support, a hypertension clinic, on-site lab tests and home visits for patients who can't travel.</p>
+                    <div class="hero-in mt-8 flex flex-col gap-3 sm:flex-row">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-sun px-7 py-4 font-extrabold text-mangrove-deep shadow-lg shadow-black/20 transition hover:bg-sun-dark"><i class="fa-solid fa-calendar-check"></i> Book an appointment</a>
+                        <button type="button" data-open-story class="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-7 py-4 font-bold text-white transition hover:bg-white/10"><i class="fa-solid fa-circle-play text-xl text-tide"></i> Watch our story</button>
+                    </div>
+                    <p class="hero-in mt-6 text-sm text-white/70">Need a home visit or have a quick question? <a href="https://wa.me/254707383616?text=Hello%20Jusam%20Medical%20Clinic%2C%20I%20have%20a%20question." target="_blank" rel="noopener" class="font-bold text-tide underline underline-offset-4 hover:text-white">Message us on WhatsApp</a>.</p>
+                </div>
+
+                <!-- Animated film card -->
+                <div class="hero-in lg:col-span-6">
+                    <button type="button" data-open-story class="video-card group relative block aspect-[16/11] w-full overflow-hidden rounded-[2rem] text-left shadow-[0_40px_100px_-30px_rgba(0,0,0,.75)] ring-1 ring-white/20" aria-label="Play our story, a short animated film about Jusam Medical Clinic">
+                        <svg viewBox="0 0 640 440" class="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0" stop-color="#062B2D"/>
+                                    <stop offset=".42" stop-color="#0E6B6A"/>
+                                    <stop offset=".68" stop-color="#F3C56B"/>
+                                    <stop offset="1" stop-color="#FBE3A6"/>
+                                </linearGradient>
+                                <radialGradient id="sunGlow">
+                                    <stop offset="0" stop-color="#FFE6A3" stop-opacity=".9"/>
+                                    <stop offset="1" stop-color="#FFE6A3" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+                            <rect width="640" height="440" fill="url(#skyGrad)"/>
+                            <g class="sun-rise">
+                                <circle class="sun-glow" cx="440" cy="270" r="140" fill="url(#sunGlow)"/>
+                                <circle cx="440" cy="270" r="54" fill="#FFE9B0"/>
+                                <path d="M440 244v52M414 270h52" stroke="#0A3D3F" stroke-width="10" stroke-linecap="round"/>
+                            </g>
+                            <path class="ecg-line" pathLength="1000" d="M0 105 H130 l10 -8 l10 8 H210 l8 8 l14 -66 l14 84 l8 -26 H320 q16 -24 32 0 H430 l10 -8 l10 8 H520 l8 8 l14 -66 l14 84 l8 -26 H640" fill="none" stroke="#6FD6C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="wave wave-1" d="M0 292 q50 -10 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V440 H0 Z" fill="#1B8A85" opacity=".9"/>
+                            <g transform="translate(0 286)">
+                                <g class="sail"><g class="bob">
+                                    <path d="M0 0 H62 L52 14 H10 Z" fill="#0A2A2B"/>
+                                    <path d="M30 0 V-58" stroke="#0A2A2B" stroke-width="2.5"/>
+                                    <path d="M33 -3 L33 -56 Q60 -30 68 -3 Z" fill="#FFF6DE"/>
+                                </g></g>
+                            </g>
+                            <path class="wave wave-2" d="M0 312 q50 -10 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V440 H0 Z" fill="#0E7C7B"/>
+                            <path class="wave wave-3" d="M0 344 q50 -10 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V440 H0 Z" fill="#0A3D3F"/>
+                        </svg>
+                        <span class="absolute left-4 top-4 rounded-full bg-black/25 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur"><i class="fa-solid fa-location-dot mr-1.5 text-tide"></i>Ramisi Ward, Kwale County</span>
+                        <span class="absolute inset-0 grid place-items-center"><span class="play-btn"><i class="fa-solid fa-play"></i></span></span>
+                        <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-5 pb-4 pt-10 text-sm text-white"><strong class="font-bold">Watch our story</strong> <span data-reel-length class="text-white/75"></span></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- At a glance -->
+        <section aria-label="Clinic at a glance" class="relative z-10 -mt-16">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-px overflow-hidden rounded-2xl bg-slate-200 shadow-[0_30px_60px_-30px_rgba(6,43,45,.5)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex items-start gap-4 bg-white p-5">
+                        <span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-clock"></i></span>
+                        <div><p class="font-bold text-mangrove">Monday to Saturday</p><p class="text-sm text-slate-600">8:00 AM to 6:00 PM</p><p class="mt-1 flex items-center gap-2 text-xs font-semibold text-slate-500"><span class="status-dot" data-status-dot></span><span data-status-text>Checking hours</span></p></div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white p-5">
+                        <span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-location-dot"></i></span>
+                        <div><p class="font-bold text-mangrove">Ramisi Ward</p><p class="text-sm text-slate-600">Kwale County, Kenya</p><a href="#contact" class="mt-1 inline-block text-xs font-bold text-lagoon hover:underline">See map and directions</a></div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white p-5">
+                        <span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                        <div><p class="font-bold text-mangrove">Cash and M-Pesa</p><p class="text-sm text-slate-600">Plus approved local payment channels</p></div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white p-5">
+                        <span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-microscope"></i></span>
+                        <div><p class="font-bold text-mangrove">Laboratory on site</p><p class="text-sm text-slate-600">Malaria, typhoid, glucose and more</p><a href="#lab" class="mt-1 inline-block text-xs font-bold text-lagoon hover:underline">See all tests</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our story -->
+        <section id="about" class="bg-white py-24">
+            <div class="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+                <div class="lg:col-span-5">
+                    <h2 class="font-display text-4xl font-semibold leading-[1.1] text-mangrove sm:text-[2.75rem]">Jusam began with a child who was cared for, and grew up to care for others.</h2>
+                    <p class="mt-6 max-w-lg text-lg leading-relaxed text-slate-600">Jusam Medical Clinic is a Level 2 health facility serving Ramisi Ward. It was founded by a dedicated nurse who grew up at Faraja Children's Home, supported over the long term by North South Partnership Aid (NSP Aid), Norway.</p>
+                    <p class="mt-4 max-w-lg text-lg leading-relaxed text-slate-600">That support shaped a life of service. Today the clinic passes it on to an underserved coastal community, so that elderly and critically ill patients with nowhere else to turn are seen with professional care and dignity.</p>
+                </div>
+                <div class="lg:col-span-7 lg:pl-10">
+                    <ol class="relative ml-3 border-l-2 border-lagoon/25">
+                        <li class="relative pb-10 pl-9">
+                            <span class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-lagoon ring-4 ring-white"></span>
+                            <h3 class="font-display text-2xl font-semibold text-mangrove">Growing up at Faraja</h3>
+                            <p class="mt-2 max-w-xl text-slate-600">Our founder was raised at Faraja Children's Home.</p>
+                        </li>
+                        <li class="relative pb-10 pl-9">
+                            <span class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-lagoon ring-4 ring-white"></span>
+                            <h3 class="font-display text-2xl font-semibold text-mangrove">Long-term support</h3>
+                            <p class="mt-2 max-w-xl text-slate-600">North South Partnership Aid (NSP Aid), Norway supported the home over many years and helped shape the founder's outlook on service.</p>
+                        </li>
+                        <li class="relative pb-10 pl-9">
+                            <span class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-lagoon ring-4 ring-white"></span>
+                            <h3 class="font-display text-2xl font-semibold text-mangrove">Becoming a nurse</h3>
+                            <p class="mt-2 max-w-xl text-slate-600">A career in nursing followed, driven by a wish to care for people who have few places to turn.</p>
+                        </li>
+                        <li class="relative pl-9">
+                            <span class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-sun ring-4 ring-white"></span>
+                            <h3 class="font-display text-2xl font-semibold text-mangrove">Jusam Medical Clinic</h3>
+                            <p class="mt-2 max-w-xl text-slate-600">A Level 2 clinic in Ramisi Ward (MFL code 34670), with special attention for elderly and immobile patients, mothers and families.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="bg-mist py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl">
+                    <h2 class="font-display text-4xl font-semibold leading-[1.1] text-mangrove sm:text-[2.75rem]">Care for the whole family, close to home.</h2>
+                    <p class="mt-5 text-lg leading-relaxed text-slate-600">Choose a service to see what it includes and book it in one tap.</p>
+                </div>
+
+                <div id="services-tabs" class="mt-12 grid gap-8 lg:grid-cols-12">
+                    <div role="tablist" aria-label="Clinic services" aria-orientation="vertical" class="flex flex-col gap-2 lg:col-span-4">
+                        <button role="tab" id="tab-svc-0" aria-controls="panel-svc-0" aria-selected="true" class="svc-tab" type="button"><span class="ico"><i class="fa-solid fa-stethoscope"></i></span>General outpatient care</button>
+                        <button role="tab" id="tab-svc-1" aria-controls="panel-svc-1" aria-selected="false" tabindex="-1" class="svc-tab" type="button"><span class="ico"><i class="fa-solid fa-person-pregnant"></i></span>Maternity and antenatal care</button>
+                        <button role="tab" id="tab-svc-2" aria-controls="panel-svc-2" aria-selected="false" tabindex="-1" class="svc-tab" type="button"><span class="ico"><i class="fa-solid fa-heart-pulse"></i></span>Hypertension and chronic clinic</button>
+                        <button role="tab" id="tab-svc-3" aria-controls="panel-svc-3" aria-selected="false" tabindex="-1" class="svc-tab" type="button"><span class="ico"><i class="fa-solid fa-house-chimney-medical"></i></span>Home-based care</button>
+                        <button role="tab" id="tab-svc-4" aria-controls="panel-svc-4" aria-selected="false" tabindex="-1" class="svc-tab" type="button"><span class="ico"><i class="fa-solid fa-flask"></i></span>On-site laboratory</button>
+                    </div>
+
+                    <div class="lg:col-span-8">
+                        <div class="rounded-[1.75rem] bg-white p-7 shadow-[0_30px_70px_-40px_rgba(10,61,63,.5)] ring-1 ring-black/5 sm:p-10">
+                            <div role="tabpanel" id="panel-svc-0" aria-labelledby="tab-svc-0" class="panel-in">
+                                <h3 class="font-display text-3xl font-semibold text-mangrove">General outpatient consultations</h3>
+                                <p class="mt-3 max-w-xl leading-relaxed text-slate-600">Professional diagnosis, clinical evaluation and evidence-based treatment for acute and common illnesses, for every age group.</p>
+                                <ul class="mt-6 space-y-3 text-slate-700">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Clinical examination and prescriptions</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Management of acute infections</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Laboratory tests on site when they are needed</li>
+                                </ul>
+                                <div class="mt-8 flex flex-wrap gap-3">
+                                    <a href="#contact" data-service="General Outpatient Consultation" class="rounded-full bg-mangrove px-6 py-3 font-bold text-white transition hover:bg-lagoon">Book this service</a>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" id="panel-svc-1" aria-labelledby="tab-svc-1" class="panel-in" hidden>
+                                <h3 class="font-display text-3xl font-semibold text-mangrove">Maternity and antenatal care</h3>
+                                <p class="mt-3 max-w-xl leading-relaxed text-slate-600">Pregnancy wellness monitoring, nutritional guidance and health education to support safe pregnancies for mothers in Ramisi Ward.</p>
+                                <ul class="mt-6 space-y-3 text-slate-700">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Antenatal profile and regular check-ups</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Nutritional guidance during pregnancy</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Maternal health education</li>
+                                </ul>
+                                <div class="mt-8 flex flex-wrap gap-3">
+                                    <a href="#contact" data-service="Maternity & Antenatal Care" class="rounded-full bg-mangrove px-6 py-3 font-bold text-white transition hover:bg-lagoon">Book this service</a>
+                                    <a href="#tools" class="rounded-full border border-slate-200 px-6 py-3 font-bold text-mangrove transition hover:border-lagoon hover:text-lagoon">Estimate your due date</a>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" id="panel-svc-2" aria-labelledby="tab-svc-2" class="panel-in" hidden>
+                                <h3 class="font-display text-3xl font-semibold text-mangrove">Hypertension and chronic clinic</h3>
+                                <p class="mt-3 max-w-xl leading-relaxed text-slate-600">Ongoing management of long-term conditions, with routine blood pressure monitoring, medication review and practical lifestyle counselling.</p>
+                                <ul class="mt-6 space-y-3 text-slate-700">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Regular blood pressure and vitals tracking</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Medication management</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Lifestyle counselling tailored to you</li>
+                                </ul>
+                                <div class="mt-8 flex flex-wrap gap-3">
+                                    <a href="#contact" data-service="Hypertension Check / Chronic Clinic" class="rounded-full bg-mangrove px-6 py-3 font-bold text-white transition hover:bg-lagoon">Book this service</a>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" id="panel-svc-3" aria-labelledby="tab-svc-3" class="panel-in" hidden>
+                                <h3 class="font-display text-3xl font-semibold text-mangrove">Home-based care</h3>
+                                <p class="mt-3 max-w-xl leading-relaxed text-slate-600">A qualified nurse brings clinical care to the home of elderly, immobile or critically ill patients who can't easily travel to the clinic.</p>
+                                <ul class="mt-6 space-y-3 text-slate-700">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Wound dressing and ulcer care</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Urinary catheter changes</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Chronic illness monitoring and vitals</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Follow-up during post-surgical recovery</li>
+                                </ul>
+                                <div class="mt-8 flex flex-wrap gap-3">
+                                    <a href="#contact" data-service="Home-Based Care (Wound Care / Catheter)" class="rounded-full bg-mangrove px-6 py-3 font-bold text-white transition hover:bg-lagoon">Request a home visit</a>
+                                    <a href="#homecare" class="rounded-full border border-slate-200 px-6 py-3 font-bold text-mangrove transition hover:border-lagoon hover:text-lagoon">How home visits work</a>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" id="panel-svc-4" aria-labelledby="tab-svc-4" class="panel-in" hidden>
+                                <h3 class="font-display text-3xl font-semibold text-mangrove">On-site laboratory</h3>
+                                <p class="mt-3 max-w-xl leading-relaxed text-slate-600">Accurate diagnosis leads to effective treatment. Our lab screens for common infections and health conditions without sending you elsewhere.</p>
+                                <ul class="mt-6 grid gap-3 text-slate-700 sm:grid-cols-2">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Malaria screening</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Typhoid screening</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>H. pylori test</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Haemoglobin (Hb)</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Blood glucose</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-1 text-lagoon"></i>Urine dipstick and microscopy</li>
+                                </ul>
+                                <div class="mt-8 flex flex-wrap gap-3">
+                                    <a href="#contact" data-service="On-Site Laboratory Test" class="rounded-full bg-mangrove px-6 py-3 font-bold text-white transition hover:bg-lagoon">Book a test</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home care -->
+        <section id="homecare" class="hero-bg relative overflow-hidden py-24 text-white">
+            <div class="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+                <div class="lg:col-span-6">
+                    <h2 class="font-display text-4xl font-semibold leading-[1.1] sm:text-[2.75rem]">Home visits for patients who can't travel.</h2>
+                    <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/80">For elderly, immobile or critically ill patients, Jusam Medical Clinic brings professional care to the door, with dignity, compassion and expertise.</p>
+
+                    <ul class="mt-9 divide-y divide-white/10 border-y border-white/10">
+                        <li class="flex items-start gap-4 py-5">
+                            <span class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-white/10 text-tide"><i class="fa-solid fa-bandage text-lg"></i></span>
+                            <div><h3 class="font-bold">Wound dressing</h3><p class="text-sm text-white/70">Sterile dressing and ulcer care.</p></div>
+                        </li>
+                        <li class="flex items-start gap-4 py-5">
+                            <span class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-white/10 text-tide"><i class="fa-solid fa-syringe text-lg"></i></span>
+                            <div><h3 class="font-bold">Catheter changes</h3><p class="text-sm text-white/70">Safe, hygienic urinary catheter care.</p></div>
+                        </li>
+                        <li class="flex items-start gap-4 py-5">
+                            <span class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-white/10 text-tide"><i class="fa-solid fa-heart-pulse text-lg"></i></span>
+                            <div><h3 class="font-bold">Chronic illness monitoring</h3><p class="text-sm text-white/70">Regular vitals, illness assessment and recovery follow-up.</p></div>
+                        </li>
+                    </ul>
+
+                    <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+                        <a href="https://wa.me/254707383616?text=Hello%20Jusam%20Medical%20Clinic%2C%20I%20would%20like%20to%20request%20a%20home%20visit.%0APatient%20location%20in%20Ramisi%20Ward%3A%20%0ACare%20needed%3A%20" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-4 font-extrabold text-white shadow-lg shadow-black/20 transition hover:brightness-110"><i class="fa-brands fa-whatsapp text-xl"></i> Request a home visit on WhatsApp</a>
+                        <a href="#contact" data-service="Home-Based Care (Wound Care / Catheter)" class="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-4 font-bold text-white transition hover:bg-white/10">Use the booking form</a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 lg:pl-8">
+                    <div class="rounded-[1.75rem] bg-white/[.06] p-7 ring-1 ring-white/15 backdrop-blur sm:p-9">
+                        <h3 class="font-display text-2xl font-semibold">How a home visit works</h3>
+                        <ol class="mt-7 space-y-7">
+                            <li class="flex gap-5">
+                                <span class="grid h-10 w-10 flex-none place-items-center rounded-full bg-sun font-extrabold text-mangrove-deep">1</span>
+                                <div><h4 class="font-bold">Message us</h4><p class="mt-1 text-sm leading-relaxed text-white/75">Send the patient's location in Ramisi Ward and the care needed, by WhatsApp or the booking form.</p></div>
+                            </li>
+                            <li class="flex gap-5">
+                                <span class="grid h-10 w-10 flex-none place-items-center rounded-full bg-sun font-extrabold text-mangrove-deep">2</span>
+                                <div><h4 class="font-bold">We confirm a time</h4><p class="mt-1 text-sm leading-relaxed text-white/75">We reply to agree a suitable visit time with you or the patient's family.</p></div>
+                            </li>
+                            <li class="flex gap-5">
+                                <span class="grid h-10 w-10 flex-none place-items-center rounded-full bg-sun font-extrabold text-mangrove-deep">3</span>
+                                <div><h4 class="font-bold">A nurse visits</h4><p class="mt-1 text-sm leading-relaxed text-white/75">A qualified nurse provides the care at home, from dressings and catheter changes to vitals checks.</p></div>
+                            </li>
+                            <li class="flex gap-5">
+                                <span class="grid h-10 w-10 flex-none place-items-center rounded-full bg-sun font-extrabold text-mangrove-deep">4</span>
+                                <div><h4 class="font-bold">Follow-up</h4><p class="mt-1 text-sm leading-relaxed text-white/75">We plan any repeat visits for ongoing illness or recovery.</p></div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Laboratory and payment -->
+        <section id="lab" class="bg-white py-24">
+            <div class="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+                <div class="lg:col-span-7">
+                    <h2 class="font-display text-4xl font-semibold leading-[1.1] text-mangrove sm:text-[2.75rem]">Tests done on site, so treatment can start sooner.</h2>
+                    <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">Accurate diagnosis leads to effective treatment. Our on-site laboratory screens for common infections and conditions. Ask the clinician which tests are right for you.</p>
+                    <ul class="mt-9 grid gap-3 sm:grid-cols-2">
+                        <li class="flex items-center gap-4 rounded-2xl border border-slate-200 p-4 transition hover:border-lagoon hover:bg-mist"><span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-bug"></i></span><span class="font-bold text-mangrove">Malaria screening</span></li>
+                        <li class="flex items-center gap-4 rounded-2xl border border-slate-200 p-4 transition hover:border-lagoon hover:bg-mist"><span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-microscope"></i></span><span class="font-bold text-mangrove">Typhoid screening</span></li>
+                        <li class="flex items-center gap-4 rounded-2xl border border-slate-200 p-4 transition hover:border-lagoon hover:bg-mist"><span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-droplet"></i></span><span class="font-bold text-mangrove">Haemoglobin (Hb)</span></li>
+                        <li class="flex items-center gap-4 rounded-2xl border border-slate-200 p-4 transition hover:border-lagoon hover:bg-mist"><span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-gauge-high"></i></span><span class="font-bold text-mangrove">Blood glucose</span></li>
+                        <li class="flex items-center gap-4 rounded-2xl border border-slate-200 p-4 transition hover:border-lagoon hover:bg-mist"><span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-vials"></i></span><span class="font-bold text-mangrove">Urine dipstick and microscopy</span></li>
+                        <li class="flex items-center gap-4 rounded-2xl border border-slate-200 p-4 transition hover:border-lagoon hover:bg-mist"><span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-mist text-lagoon"><i class="fa-solid fa-notes-medical"></i></span><span class="font-bold text-mangrove">H. pylori test</span></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="rounded-[1.75rem] bg-mist p-7 ring-1 ring-black/5 sm:p-9">
+                        <h3 class="font-display text-2xl font-semibold text-mangrove">Paying for your care</h3>
+                        <div class="mt-7 space-y-6">
+                            <div class="flex gap-4">
+                                <span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-white text-lagoon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                                <div>
+                                    <h4 class="font-bold text-mangrove">SHA empanelment <span class="ml-1 rounded-full bg-sun/25 px-2.5 py-0.5 text-xs font-bold text-[#8a5a00]">In progress</span></h4>
+                                    <p class="mt-1 text-sm leading-relaxed text-slate-600">We are completing our Social Health Authority empanelment. Message us to check the latest status before your visit.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="grid h-11 w-11 flex-none place-items-center rounded-xl bg-white text-lagoon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                                <div>
+                                    <h4 class="font-bold text-mangrove">Cash and mobile money</h4>
+                                    <p class="mt-1 text-sm leading-relaxed text-slate-600">We accept cash, M-Pesa and approved local payment channels for consultations and lab services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/254707383616?text=Hello%20Jusam%20Medical%20Clinic%2C%20I%20would%20like%20to%20ask%20about%20SHA%20and%20payment." target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 rounded-full bg-mangrove px-6 py-3 font-bold text-white transition hover:bg-lagoon"><i class="fa-brands fa-whatsapp"></i> Ask about payment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health tools -->
+        <section id="tools" class="bg-mist py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-12 lg:grid-cols-12">
+                    <div class="lg:col-span-5">
+                        <h2 class="font-display text-4xl font-semibold leading-[1.1] text-mangrove sm:text-[2.75rem]">Two quick checks you can do from your phone.</h2>
+                        <p class="mt-6 max-w-md text-lg leading-relaxed text-slate-600">Work out your BMI or estimate a pregnancy due date. These tools give general information only and don't replace a clinical assessment. A clinician should confirm any result.</p>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div id="tools-tabs" class="rounded-[1.75rem] bg-white p-6 shadow-[0_30px_70px_-40px_rgba(10,61,63,.5)] ring-1 ring-black/5 sm:p-9">
+                            <div role="tablist" aria-label="Health tools" class="inline-flex gap-1 rounded-full bg-mist p-1">
+                                <button role="tab" id="tab-tool-0" aria-controls="panel-tool-0" aria-selected="true" class="tool-tab" type="button"><i class="fa-solid fa-weight-scale mr-2"></i>BMI calculator</button>
+                                <button role="tab" id="tab-tool-1" aria-controls="panel-tool-1" aria-selected="false" tabindex="-1" class="tool-tab" type="button"><i class="fa-solid fa-baby mr-2"></i>Due date</button>
+                            </div>
+
+                            <div role="tabpanel" id="panel-tool-0" aria-labelledby="tab-tool-0" class="mt-7">
+                                <form id="bmi-form" novalidate>
+                                    <div class="grid gap-4 sm:grid-cols-2">
+                                        <div><label class="lbl" for="bmi-weight">Weight (kg)</label><input class="field" id="bmi-weight" type="number" inputmode="decimal" step="0.1" placeholder="e.g. 68"></div>
+                                        <div><label class="lbl" for="bmi-height">Height (cm)</label><input class="field" id="bmi-height" type="number" inputmode="decimal" step="0.1" placeholder="e.g. 165"></div>
+                                    </div>
+                                    <p id="bmi-error" class="mt-3 min-h-[1.25rem] text-sm font-semibold text-coral" role="alert"></p>
+                                    <button type="submit" class="rounded-full bg-mangrove px-7 py-3.5 font-bold text-white transition hover:bg-lagoon">Calculate BMI</button>
+                                </form>
+                                <div id="bmi-result" class="mt-8 rounded-2xl bg-mist p-6" aria-live="polite" hidden>
+                                    <p class="text-sm font-semibold text-slate-500">Your BMI</p>
+                                    <p class="mt-1 flex flex-wrap items-baseline gap-x-4"><span id="bmi-value" class="font-display text-5xl font-semibold text-mangrove"></span><span id="bmi-label" class="text-lg font-bold text-lagoon"></span></p>
+                                    <div class="mt-6 px-2"><div class="bmi-scale"><span id="bmi-marker" class="bmi-marker"></span></div></div>
+                                    <div class="mt-3 flex justify-between text-xs font-semibold text-slate-500"><span>15</span><span>18.5</span><span>25</span><span>30</span><span>40</span></div>
+                                    <p class="mt-5 text-sm leading-relaxed text-slate-600">BMI is a rough guide and isn't suitable for children, pregnant women or very muscular adults. Book a check-up for personal advice.</p>
+                                    <a href="#contact" data-service="General Outpatient Consultation" class="mt-4 inline-block font-bold text-lagoon hover:underline">Book a consultation</a>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" id="panel-tool-1" aria-labelledby="tab-tool-1" class="mt-7" hidden>
+                                <form id="edd-form" novalidate>
+                                    <div><label class="lbl" for="lmp">First day of your last period</label><input class="field sm:max-w-xs" id="lmp" type="date"></div>
+                                    <p id="edd-error" class="mt-3 min-h-[1.25rem] text-sm font-semibold text-coral" role="alert"></p>
+                                    <button type="submit" class="rounded-full bg-mangrove px-7 py-3.5 font-bold text-white transition hover:bg-lagoon">Estimate due date</button>
+                                </form>
+                                <div id="edd-result" class="mt-8 rounded-2xl bg-mist p-6" aria-live="polite" hidden>
+                                    <p class="text-sm font-semibold text-slate-500">Estimated due date</p>
+                                    <p id="edd-date" class="font-display mt-1 text-3xl font-semibold text-mangrove sm:text-4xl"></p>
+                                    <p class="mt-4 text-lg text-slate-700">You are about <strong id="edd-weeks"></strong> pregnant, in your <strong id="edd-tri"></strong> trimester.</p>
+                                    <p class="mt-5 text-sm leading-relaxed text-slate-600">This estimate assumes a regular 28-day cycle. Your clinician can confirm your due date at an antenatal visit.</p>
+                                    <a href="#contact" data-service="Maternity & Antenatal Care" class="mt-4 inline-block font-bold text-lagoon hover:underline">Book an antenatal visit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="bg-white py-24">
+            <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+                <div class="lg:col-span-4">
+                    <h2 class="font-display text-4xl font-semibold leading-[1.1] text-mangrove sm:text-[2.75rem]">Questions patients often ask.</h2>
+                    <p class="mt-5 text-lg leading-relaxed text-slate-600">Can't find your answer? <a href="https://wa.me/254707383616?text=Hello%20Jusam%20Medical%20Clinic%2C%20I%20have%20a%20question." target="_blank" rel="noopener" class="font-bold text-lagoon underline underline-offset-4">Ask us on WhatsApp</a>.</p>
+                </div>
+                <div class="lg:col-span-8">
+                    <details class="faq" open>
+                        <summary>When is the clinic open?<i class="fa-solid fa-plus chev"></i></summary>
+                        <p class="ans">We are open Monday to Saturday, from 8:00 AM to 6:00 PM, and closed on Sundays. You can message us on WhatsApp with emergency and home support inquiries.</p>
+                    </details>
+                    <details class="faq">
+                        <summary>How do I book an appointment?<i class="fa-solid fa-plus chev"></i></summary>
+                        <p class="ans">Fill in the booking form in the contact section. It opens WhatsApp with your details filled in, and you press send to reach us. You can also message or call +254 707 383616 directly.</p>
+                    </details>
+                    <details class="faq">
+                        <summary>Do you offer home visits?<i class="fa-solid fa-plus chev"></i></summary>
+                        <p class="ans">Yes. Our nurse provides wound dressing, catheter changes and chronic illness monitoring at home for elderly, immobile or critically ill patients in Ramisi Ward. Message us the patient's location and the care needed.</p>
+                    </details>
+                    <details class="faq">
+                        <summary>Do you accept SHA?<i class="fa-solid fa-plus chev"></i></summary>
+                        <p class="ans">Our Social Health Authority empanelment is in progress. Please message us before your visit to check the latest status and how payment will work.</p>
+                    </details>
+                    <details class="faq">
+                        <summary>How can I pay?<i class="fa-solid fa-plus chev"></i></summary>
+                        <p class="ans">We accept cash, M-Pesa and approved local payment channels for consultations and laboratory services.</p>
+                    </details>
+                    <details class="faq">
+                        <summary>What does a Level 2 facility mean?<i class="fa-solid fa-plus chev"></i></summary>
+                        <p class="ans">In Kenya's health system, Level 2 facilities provide primary outpatient care close to communities. For serious emergencies, go to the nearest hospital or call 999 or 112.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="bg-mist py-24">
+            <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+                <div class="lg:col-span-5">
+                    <h2 class="font-display text-4xl font-semibold leading-[1.1] text-mangrove sm:text-[2.75rem]">Visit us or send a request.</h2>
+                    <p class="mt-5 text-lg leading-relaxed text-slate-600">Book a visit, ask a question or arrange care at home in Ramisi Ward.</p>
+
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-start gap-4 rounded-2xl bg-white p-5 ring-1 ring-black/5">
+                            <span class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-lagoon text-white"><i class="fa-solid fa-location-dot"></i></span>
+                            <div><h3 class="font-bold text-mangrove">Location</h3><p class="text-sm text-slate-600">Ramisi Ward, Kwale County, Kenya</p><p class="mt-1 text-xs font-semibold text-slate-500">MFL code 34670</p></div>
+                        </li>
+                        <li class="flex items-start gap-4 rounded-2xl bg-white p-5 ring-1 ring-black/5">
+                            <span class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-lagoon text-white"><i class="fa-solid fa-clock"></i></span>
+                            <div><h3 class="font-bold text-mangrove">Opening hours</h3><p class="text-sm text-slate-600">Monday to Saturday, 8:00 AM to 6:00 PM</p><p class="mt-1 flex items-center gap-2 text-xs font-semibold text-slate-500"><span class="status-dot" data-status-dot></span><span data-status-text>Checking hours</span></p></div>
+                        </li>
+                        <li class="flex items-start gap-4 rounded-2xl bg-white p-5 ring-1 ring-black/5">
+                            <span class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-[#25D366] text-white"><i class="fa-brands fa-whatsapp text-xl"></i></span>
+                            <div><h3 class="font-bold text-mangrove">WhatsApp and phone</h3><a href="https://wa.me/254707383616" target="_blank" rel="noopener" class="block text-sm font-bold text-lagoon hover:underline">+254 707 383616</a><a href="tel:+254707383616" class="text-xs font-semibold text-slate-500 hover:text-lagoon">Or call us directly</a></div>
+                        </li>
+                    </ul>
+
+                    <iframe title="Map showing Ramisi, Kwale County" src="https://www.google.com/maps?q=Ramisi,Kwale,Kenya&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mt-6 h-64 w-full rounded-2xl border-0 ring-1 ring-black/5"></iframe>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Ramisi%2C+Kwale%2C+Kenya" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2 text-sm font-bold text-lagoon hover:underline"><i class="fa-solid fa-diamond-turn-right"></i> Get directions</a>
+
+                    <p class="mt-6 rounded-2xl border border-coral/30 bg-coral/10 p-4 text-sm leading-relaxed text-[#8a2f1c]"><i class="fa-solid fa-triangle-exclamation mr-2"></i>For a life-threatening emergency, go to the nearest hospital or call 999 or 112. Don't wait for a WhatsApp reply.</p>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="rounded-[1.75rem] bg-white p-7 shadow-[0_30px_70px_-40px_rgba(10,61,63,.5)] ring-1 ring-black/5 sm:p-10">
+                        <h3 class="font-display text-3xl font-semibold text-mangrove">Request an appointment</h3>
+                        <p class="mt-2 text-sm text-slate-600">This opens WhatsApp with your details filled in. Nothing is sent until you press send in WhatsApp.</p>
+
+                        <form id="booking-form" class="mt-7 space-y-5" novalidate>
+                            <div class="grid gap-5 sm:grid-cols-2">
+                                <div><label class="lbl" for="client-name">Full name</label><input class="field" id="client-name" type="text" autocomplete="name" placeholder="e.g. Amina Juma" required></div>
+                                <div><label class="lbl" for="client-phone">Phone number</label><input class="field" id="client-phone" type="tel" autocomplete="tel" placeholder="07XX XXX XXX" required></div>
+                            </div>
+                            <div class="grid gap-5 sm:grid-cols-2">
+                                <div>
+                                    <label class="lbl" for="client-service">Service</label>
+                                    <select class="field" id="client-service">
+                                        <option>General Outpatient Consultation</option>
+                                        <option>Maternity &amp; Antenatal Care</option>
+                                        <option>Hypertension Check / Chronic Clinic</option>
+                                        <option>Home-Based Care (Wound Care / Catheter)</option>
+                                        <option>On-Site Laboratory Test</option>
+                                    </select>
+                                </div>
+                                <div><label class="lbl" for="client-date">Preferred date</label><input class="field" id="client-date" type="date" required></div>
+                            </div>
+                            <div>
+                                <label class="lbl" for="client-time">Preferred time</label>
+                                <select class="field" id="client-time">
+                                    <option>No preference</option>
+                                    <option>Morning (8:00 AM to 12:00 PM)</option>
+                                    <option>Afternoon (12:00 PM to 6:00 PM)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="lbl" for="client-notes">Notes, symptoms or location</label>
+                                <textarea class="field" id="client-notes" rows="3" placeholder="For home visits, tell us where in Ramisi Ward the patient is."></textarea>
+                            </div>
+                            <p id="form-error" class="min-h-[1.25rem] text-sm font-semibold text-coral" role="alert"></p>
+                            <button type="submit" class="flex w-full items-center justify-center gap-3 rounded-full bg-[#25D366] py-4 text-base font-extrabold text-white shadow-lg shadow-[#25D366]/30 transition hover:brightness-110"><i class="fa-brands fa-whatsapp text-2xl"></i> Send request on WhatsApp</button>
+                        </form>
+
+                        <div id="success-alert" class="mt-5 rounded-2xl bg-mist p-4 text-sm font-semibold text-mangrove" role="status" hidden>
+                            <i class="fa-solid fa-circle-check mr-2 text-lagoon"></i>WhatsApp should now be open with your request. If it didn't open, <a id="wa-fallback" href="#" target="_blank" rel="noopener" class="underline underline-offset-4">tap here to open it</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-mangrove-deep pt-16 text-white/70">
+        <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-12 lg:px-8">
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-3">
+                    <span class="relative grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-lagoon ring-2 ring-white/15">
+                        <b class="font-display text-xl text-white">J</b>
+                        <img src="jusam.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'">
+                    </span>
+                    <span class="font-display text-xl font-semibold text-white">Jusam Medical Clinic</span>
+                </div>
+                <p class="mt-5 max-w-sm text-sm leading-relaxed">Outpatient, maternity, chronic illness care, laboratory tests and home-based care for Ramisi Ward, Kwale County.</p>
+            </div>
+            <div class="md:col-span-2">
+                <h4 class="font-bold text-white">Explore</h4>
+                <ul class="mt-4 space-y-2.5 text-sm">
+                    <li><a href="#about" class="hover:text-white">Our story</a></li>
+                    <li><a href="#services" class="hover:text-white">Services</a></li>
+                    <li><a href="#homecare" class="hover:text-white">Home care</a></li>
+                    <li><a href="#lab" class="hover:text-white">Lab tests</a></li>
+                    <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2">
+                <h4 class="font-bold text-white">Visit</h4>
+                <ul class="mt-4 space-y-2.5 text-sm">
+                    <li>Ramisi Ward, Kwale County</li>
+                    <li>Mon to Sat, 8 AM to 6 PM</li>
+                    <li><a href="tel:+254707383616" class="hover:text-white">+254 707 383616</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-3">
+                <h4 class="font-bold text-white">Registration</h4>
+                <ul class="mt-4 space-y-2.5 text-sm">
+                    <li>Level 2 health facility</li>
+                    <li>MFL code 34670</li>
+                    <li>SHA empanelment in progress</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mx-auto mt-14 max-w-7xl border-t border-white/10 px-4 py-6 text-xs sm:px-6 lg:px-8">
+            <p>&copy; <span id="year">2026</span> Jusam Medical Clinic. All rights reserved. This website gives general information and is not a substitute for medical advice.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp button (stays in place while scrolling) -->
+    <a class="wa-float" href="https://wa.me/254707383616?text=Hello%20Jusam%20Medical%20Clinic%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener" aria-label="Chat with Jusam Medical Clinic on WhatsApp">
+        <span class="wa-label">Chat with us</span>
+        <span class="wa-btn"><i class="fa-brands fa-whatsapp"></i></span>
+    </a>
+
+    <button id="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Story film modal -->
+    <div id="story-modal" role="dialog" aria-modal="true" aria-label="Our story, animated film">
+        <button id="story-close" type="button" aria-label="Close film"><i class="fa-solid fa-xmark"></i></button>
+        <div class="reel" id="reel">
+            <div id="reel-scenes"></div>
+            <svg class="pointer-events-none absolute inset-x-0 top-[34%] z-[1] w-full opacity-25" style="height:90px" viewBox="0 0 640 120" preserveAspectRatio="none" aria-hidden="true">
+                <path class="ecg-line" pathLength="1000" d="M0 60 H130 l10 -8 l10 8 H210 l8 8 l14 -46 l14 64 l8 -26 H320 q16 -24 32 0 H430 l10 -8 l10 8 H520 l8 8 l14 -46 l14 64 l8 -26 H640" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-16 w-full" viewBox="0 0 640 64" preserveAspectRatio="none" aria-hidden="true">
+                <path class="wave wave-1" d="M0 34 q50 -10 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V64 H0 Z" fill="rgba(255,255,255,.07)"/>
+                <path class="wave wave-2" d="M0 46 q50 -10 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V64 H0 Z" fill="rgba(255,255,255,.08)"/>
+            </svg>
+            <div id="reel-segs" class="reel-segs"></div>
+            <div class="reel-ctrl">
+                <button id="reel-prev" class="reel-btn" type="button" aria-label="Previous scene"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="reel-toggle" class="reel-btn" type="button" aria-label="Pause"><i class="fa-solid fa-pause"></i></button>
+                <button id="reel-next" class="reel-btn" type="button" aria-label="Next scene"><i class="fa-solid fa-chevron-right"></i></button>
+                <span id="reel-count" class="ml-2 text-sm font-semibold text-white/80" aria-live="off"></span>
+            </div>
+            <!-- A real video, if you add one, plays here (see CLINIC_VIDEO_SRC in the script) -->
+            <div id="reel-video" class="absolute inset-0 z-10 hidden bg-black"></div>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* ========= Settings you can edit ========= */
+        var WHATSAPP = '254707383616';
+        // To play a real video instead of the animated film, put the file next to this page
+        // and set the name here, for example: 'clinic-video.mp4'. Leave empty to use the animation.
+        var CLINIC_VIDEO_SRC = '';
+        var SCENE_MS = 5000;
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var $ = function (s, r) { return (r || document).querySelector(s); };
+        var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+        /* ========= Intro splash ========= */
+        var splash = document.getElementById('splash');
+        function hideSplash() {
+            splash.classList.add('is-hidden');
+            try { sessionStorage.setItem('jusamSplash', '1'); } catch (e) {}
+            setTimeout(function () { splash.style.display = 'none'; }, 800);
+        }
+        var minWait = new Promise(function (r) { setTimeout(r, reduceMotion ? 200 : 1500); });
+        var loaded = new Promise(function (r) { document.readyState === 'complete' ? r() : window.addEventListener('load', r); });
+        Promise.all([minWait, loaded]).then(hideSplash);
+        setTimeout(hideSplash, 4000);
+
+        /* ========= Year ========= */
+        var yr = document.getElementById('year');
+        if (yr) yr.textContent = new Date().getFullYear();
+
+        /* ========= Mobile menu ========= */
+        var menuBtn = document.getElementById('menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        function setMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuBtn.setAttribute('aria-expanded', String(open));
+            menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            menuBtn.innerHTML = '<i class="fa-solid ' + (open ? 'fa-xmark' : 'fa-bars') + ' text-xl"></i>';
+        }
+        menuBtn.addEventListener('click', function () { setMenu(mobileMenu.classList.contains('hidden')); });
+        $$('.mobile-link').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+        /* ========= Scroll: progress bar, header shadow, back to top ========= */
+        var progress = document.getElementById('progress');
+        var header = document.getElementById('site-header');
+        var toTop = document.getElementById('to-top');
+        var ticking = false;
+        function onScroll() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(function () {
+                var y = window.scrollY;
+                var max = document.documentElement.scrollHeight - window.innerHeight;
+                progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+                header.classList.toggle('shadow-md', y > 10);
+                toTop.classList.toggle('show', y > 700);
+                ticking = false;
+            });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }); });
+
+        /* ========= Active nav link ========= */
+        var navLinks = $$('.nav-link');
+        if ('IntersectionObserver' in window) {
+            var sectionObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        navLinks.forEach(function (l) { l.classList.toggle('is-active', l.getAttribute('href') === '#' + en.target.id); });
+                    }
+                });
+            }, { rootMargin: '-40% 0px -55% 0px' });
+            ['about', 'services', 'homecare', 'lab', 'tools', 'faq', 'contact'].forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el) sectionObserver.observe(el);
+            });
+        }
+
+        /* ========= Live open / closed status (Nairobi time) ========= */
+        function updateStatus() {
+            var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Africa/Nairobi', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+            var o = {};
+            parts.forEach(function (p) { o[p.type] = p.value; });
+            var mins = (parseInt(o.hour, 10) % 24) * 60 + parseInt(o.minute, 10);
+            var i = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(o.weekday);
+            var isOpen = false, text;
+            if (i !== 0 && mins >= 480 && mins < 1080) { isOpen = true; text = 'Open now, closes at 6:00 PM'; }
+            else if (i !== 0 && mins < 480) { text = 'Closed now, opens today at 8:00 AM'; }
+            else if (i >= 1 && i <= 5) { text = 'Closed now, opens tomorrow at 8:00 AM'; }
+            else { text = 'Closed now, opens Monday at 8:00 AM'; }
+            $$('[data-status-text]').forEach(function (el) { el.textContent = text; });
+            $$('[data-status-dot]').forEach(function (el) {
+                el.classList.toggle('is-open', isOpen);
+                el.classList.toggle('is-closed', !isOpen);
+            });
+        }
+        updateStatus();
+        setInterval(updateStatus, 60000);
+
+        /* ========= Hero heartbeat canvas ========= */
+        (function () {
+            var c = document.getElementById('ecg-bg');
+            if (!c || !c.getContext) return;
+            var ctx = c.getContext('2d');
+            var w = 0, h = 0, off = 0, last = 0, raf = 0, running = false;
+            function size() {
+                var dpr = Math.min(window.devicePixelRatio || 1, 2);
+                var r = c.getBoundingClientRect();
+                w = r.width; h = r.height;
+                c.width = w * dpr; c.height = h * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            function g(x, cn, wd, a) { return a * Math.exp(-Math.pow(x - cn, 2) / (2 * wd * wd)); }
+            function beat(t) { return g(t, .18, .03, .12) - g(t, .355, .008, .14) + g(t, .38, .008, 1) - g(t, .41, .01, .3) + g(t, .62, .05, .2); }
+            function draw(ts) {
+                var dt = Math.min(0.1, (ts - last) / 1000 || 0);
+                last = ts;
+                off += dt * 85;
+                ctx.clearRect(0, 0, w, h);
+                var base = h * 0.8, amp = Math.min(90, h * 0.15), period = 340;
+                var grad = ctx.createLinearGradient(0, 0, w, 0);
+                grad.addColorStop(0, 'rgba(111,214,200,0)');
+                grad.addColorStop(0.55, 'rgba(111,214,200,.3)');
+                grad.addColorStop(1, 'rgba(111,214,200,.85)');
+                ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.strokeStyle = grad;
+                ctx.beginPath();
+                for (var x = 0; x <= w; x += 2) {
+                    var p = (((x + off) % period) + period) % period / period;
+                    var y = base - beat(p) * amp;
+                    if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+                if (running) raf = requestAnimationFrame(draw);
+            }
+            function start() { if (running || reduceMotion) return; running = true; last = performance.now(); raf = requestAnimationFrame(draw); }
+            function stop() { running = false; cancelAnimationFrame(raf); }
+            size();
+            draw(performance.now());
+            var rt;
+            window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { size(); if (!running) draw(performance.now()); }, 150); });
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(function (e) { e[0].isIntersecting ? start() : stop(); }).observe(c);
+            } else { start(); }
+        })();
+
+        /* ========= Tabs (services and tools) ========= */
+        function initTabs(root) {
+            var tabs = $$('[role="tab"]', root);
+            var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+            function select(i, focus) {
+                tabs.forEach(function (t, j) {
+                    var on = i === j;
+                    t.setAttribute('aria-selected', String(on));
+                    t.tabIndex = on ? 0 : -1;
+                    panels[j].hidden = !on;
+                });
+                if (focus) tabs[i].focus();
+            }
+            tabs.forEach(function (t, i) {
+                t.addEventListener('click', function () { select(i); });
+                t.addEventListener('keydown', function (e) {
+                    var n = null;
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+                    else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+                    else if (e.key === 'Home') n = 0;
+                    else if (e.key === 'End') n = tabs.length - 1;
+                    if (n !== null) { e.preventDefault(); select(n, true); }
+                });
+            });
+        }
+        initTabs(document.getElementById('services-tabs'));
+        initTabs(document.getElementById('tools-tabs'));
+
+        /* ========= "Book this service" buttons pre-select the form ========= */
+        $$('[data-service]').forEach(function (b) {
+            b.addEventListener('click', function () {
+                var sel = document.getElementById('client-service');
+                Array.prototype.forEach.call(sel.options, function (o) { if (o.value === b.getAttribute('data-service')) sel.value = o.value; });
+            });
+        });
+
+        /* ========= BMI calculator ========= */
+        document.getElementById('bmi-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var w = parseFloat(document.getElementById('bmi-weight').value);
+            var h = parseFloat(document.getElementById('bmi-height').value);
+            var out = document.getElementById('bmi-result');
+            var err = document.getElementById('bmi-error');
+            if (!(w >= 2 && w <= 500) || !(h >= 50 && h <= 250)) {
+                err.textContent = 'Enter a weight in kg (2 to 500) and a height in cm (50 to 250).';
+                out.hidden = true;
+                return;
+            }
+            err.textContent = '';
+            var bmi = w / Math.pow(h / 100, 2);
+            var label = bmi < 18.5 ? 'Below the healthy range' : bmi < 25 ? 'In the healthy range' : bmi < 30 ? 'Above the healthy range' : 'In the obesity range';
+            document.getElementById('bmi-value').textContent = bmi.toFixed(1);
+            document.getElementById('bmi-label').textContent = label;
+            out.hidden = false;
+            var pos = Math.max(0, Math.min(1, (bmi - 15) / 25)) * 100;
+            requestAnimationFrame(function () { document.getElementById('bmi-marker').style.left = pos + '%'; });
+        });
+
+        /* ========= Due date calculator ========= */
+        (function () {
+            var input = document.getElementById('lmp');
+            function iso(d) { var z = function (n) { return String(n).padStart(2, '0'); }; return d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate()); }
+            var now = new Date();
+            input.max = iso(now);
+            input.min = iso(new Date(now.getTime() - 300 * 864e5));
+            document.getElementById('edd-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                var err = document.getElementById('edd-error');
+                var out = document.getElementById('edd-result');
+                if (!input.value) { err.textContent = 'Choose the first day of your last period.'; out.hidden = true; return; }
+                var p = input.value.split('-').map(Number);
+                var lmp = new Date(p[0], p[1] - 1, p[2]);
+                var today = new Date(); today.setHours(0, 0, 0, 0);
+                var days = Math.round((today - lmp) / 864e5);
+                if (days < 0) { err.textContent = 'Choose a date that has already passed.'; out.hidden = true; return; }
+                if (days > 294) { err.textContent = 'That date is more than 42 weeks ago. Please check it, or talk to us.'; out.hidden = true; return; }
+                err.textContent = '';
+                var edd = new Date(p[0], p[1] - 1, p[2] + 280);
+                var wk = Math.floor(days / 7), d = days % 7;
+                document.getElementById('edd-date').textContent = edd.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+                document.getElementById('edd-weeks').textContent = wk + ' week' + (wk === 1 ? '' : 's') + ' and ' + d + ' day' + (d === 1 ? '' : 's');
+                document.getElementById('edd-tri').textContent = wk < 14 ? 'first' : wk < 28 ? 'second' : 'third';
+                out.hidden = false;
+            });
+        })();
+
+        /* ========= Booking form to WhatsApp ========= */
+        (function () {
+            var form = document.getElementById('booking-form');
+            var dateInput = document.getElementById('client-date');
+            var err = document.getElementById('form-error');
+            var ok = document.getElementById('success-alert');
+            var t = new Date();
+            dateInput.min = t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var name = document.getElementById('client-name').value.trim();
+                var phone = document.getElementById('client-phone').value.trim();
+                var service = document.getElementById('client-service').value;
+                var date = dateInput.value;
+                var time = document.getElementById('client-time').value;
+                var notes = document.getElementById('client-notes').value.trim();
+                var digits = phone.replace(/\D/g, '');
+                ok.hidden = true;
+                if (!name) { err.textContent = 'Please enter your full name.'; return; }
+                if (digits.length < 9 || digits.length > 13) { err.textContent = 'Enter a valid phone number, for example 0707 383 616.'; return; }
+                if (!date) { err.textContent = 'Please choose a preferred date.'; return; }
+                if (new Date(date + 'T00:00:00').getDay() === 0) { err.textContent = 'We are closed on Sundays. Please choose Monday to Saturday.'; return; }
+                err.textContent = '';
+                var nice = new Date(date + 'T00:00:00').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+                var msg = [
+                    '*New appointment request*',
+                    '',
+                    '*Name:* ' + name,
+                    '*Phone:* ' + phone,
+                    '*Service:* ' + service,
+                    '*Preferred date:* ' + nice,
+                    '*Preferred time:* ' + time,
+                    '*Notes / location:* ' + (notes || 'None')
+                ].join('\n');
+                var url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg);
+                document.getElementById('wa-fallback').href = url;
+                window.open(url, '_blank', 'noopener');
+                ok.hidden = false;
+                form.reset();
+            });
+        })();
+
+        /* ========= Story film ========= */
+        var SCENES = [
+            { icon: 'fa-solid fa-hand-holding-heart', bg: 'linear-gradient(160deg,#0A3D3F,#0E7C7B)', title: 'Care that began with being cared for', text: "Our founder grew up at Faraja Children's Home with long-term support from NSP Aid, Norway, and became a nurse." },
+            { icon: 'fa-solid fa-location-dot', bg: 'linear-gradient(160deg,#062B2D,#12716F)', title: 'A Level 2 clinic in Ramisi Ward', text: 'Serving families across Kwale County. Registered facility, MFL code 34670.' },
+            { icon: 'fa-solid fa-stethoscope', bg: 'linear-gradient(160deg,#0B3F55,#0E7C7B)', title: 'Outpatient, maternity and chronic care', text: 'Consultations, antenatal check-ups and a hypertension clinic in one place.' },
+            { icon: 'fa-solid fa-house-chimney-medical', bg: 'linear-gradient(160deg,#0A3D3F,#2C7A5F)', title: 'Care that comes to your door', text: "Wound dressing, catheter changes and regular check-ups at home for patients who can't travel." },
+            { icon: 'fa-solid fa-microscope', bg: 'linear-gradient(160deg,#08303A,#0F6E7C)', title: 'Tests done on site', text: 'Malaria, typhoid, H. pylori, haemoglobin, blood glucose and urine tests.' },
+            { icon: 'fa-brands fa-whatsapp', bg: 'linear-gradient(160deg,#062B2D,#0E7C7B)', title: 'Need care? Message us.', text: 'Book a visit or ask about a home visit on WhatsApp.', cta: true }
+        ];
+
+        var modal = document.getElementById('story-modal');
+        var scenesEl = document.getElementById('reel-scenes');
+        var segsEl = document.getElementById('reel-segs');
+        var toggleBtn = document.getElementById('reel-toggle');
+        var countEl = document.getElementById('reel-count');
+        var videoWrap = document.getElementById('reel-video');
+        var closeBtn = document.getElementById('story-close');
+        var idx = 0, elapsed = 0, playing = false, ended = false, lastTs = 0, raf = 0, lastFocus = null;
+
+        $$('[data-reel-length]').forEach(function (el) { el.textContent = '(' + Math.round(SCENES.length * SCENE_MS / 1000) + ' sec)'; });
+
+        SCENES.forEach(function (s) {
+            var el = document.createElement('div');
+            el.className = 'reel-scene';
+            el.style.background = s.bg;
+            el.setAttribute('aria-hidden', 'true');
+            var html = '<div class="reel-ring rt"><i class="' + s.icon + '"></i></div>' +
+                '<h3 class="reel-title rt">' + s.title + '</h3>' +
+                '<p class="reel-text rt">' + s.text + '</p>';
+            if (s.cta) {
+                html += '<div class="rt">' +
+                    '<a class="reel-cta" style="background:#25D366;color:#fff" href="https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Hello Jusam Medical Clinic, I would like to make an inquiry.') + '" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Open WhatsApp</a>' +
+                    '<a class="reel-cta" style="background:#F0B44C;color:#062B2D" href="#contact" data-close>Book with the form</a></div>';
+            }
+            el.innerHTML = html;
+            scenesEl.appendChild(el);
+            var seg = document.createElement('div');
+            seg.className = 'seg';
+            seg.innerHTML = '<i></i>';
+            segsEl.appendChild(seg);
+        });
+
+        var sceneEls = $$('.reel-scene', scenesEl);
+        var segFills = $$('.seg i', segsEl);
+
+        function setToggle() {
+            var icon = ended ? 'fa-rotate-right' : playing ? 'fa-pause' : 'fa-play';
+            toggleBtn.innerHTML = '<i class="fa-solid ' + icon + '"></i>';
+            toggleBtn.setAttribute('aria-label', ended ? 'Replay' : playing ? 'Pause' : 'Play');
+        }
+        function go(i) {
+            idx = Math.max(0, Math.min(SCENES.length - 1, i));
+            elapsed = 0; ended = false;
+            sceneEls.forEach(function (el, j) {
+                var on = j === idx;
+                el.classList.toggle('active', on);
+                el.setAttribute('aria-hidden', String(!on));
+            });
+            segFills.forEach(function (f, j) { f.style.width = j < idx ? '100%' : '0%'; });
+            countEl.textContent = (idx + 1) + ' / ' + SCENES.length;
+            setToggle();
+        }
+        function tick(ts) {
+            if (!playing) return;
+            var dt = Math.min(100, ts - lastTs);
+            lastTs = ts;
+            elapsed += dt;
+            segFills[idx].style.width = Math.min(100, elapsed / SCENE_MS * 100) + '%';
+            if (elapsed >= SCENE_MS) {
+                if (idx < SCENES.length - 1) { go(idx + 1); }
+                else { playing = false; ended = true; setToggle(); return; }
+            }
+            raf = requestAnimationFrame(tick);
+        }
+        function play() { if (playing) return; playing = true; lastTs = performance.now(); setToggle(); raf = requestAnimationFrame(tick); }
+        function pause() { playing = false; cancelAnimationFrame(raf); setToggle(); }
+
+        toggleBtn.addEventListener('click', function () {
+            if (ended) { go(0); play(); }
+            else if (playing) pause();
+            else play();
+        });
+        document.getElementById('reel-next').addEventListener('click', function () { go(idx + 1); if (playing) { cancelAnimationFrame(raf); lastTs = performance.now(); raf = requestAnimationFrame(tick); } });
+        document.getElementById('reel-prev').addEventListener('click', function () { go(idx - 1); if (playing) { cancelAnimationFrame(raf); lastTs = performance.now(); raf = requestAnimationFrame(tick); } });
+
+        function openStory(trigger) {
+            lastFocus = trigger || document.activeElement;
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            if (CLINIC_VIDEO_SRC) {
+                var v = document.createElement('video');
+                v.src = CLINIC_VIDEO_SRC; v.controls = true; v.autoplay = true; v.playsInline = true;
+                v.className = 'h-full w-full object-contain';
+                videoWrap.innerHTML = ''; videoWrap.appendChild(v);
+                videoWrap.classList.remove('hidden');
+            } else {
+                go(0); play();
+            }
+            closeBtn.focus();
+        }
+        function closeStory() {
+            pause();
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+            videoWrap.innerHTML = '';
+            videoWrap.classList.add('hidden');
+            if (lastFocus && lastFocus.focus) lastFocus.focus();
+        }
+        $$('[data-open-story]').forEach(function (b) { b.addEventListener('click', function () { openStory(b); }); });
+        closeBtn.addEventListener('click', closeStory);
+        modal.addEventListener('click', function (e) { if (e.target === modal) closeStory(); });
+        $$('[data-close]', modal).forEach(function (a) { a.addEventListener('click', closeStory); });
+        document.addEventListener('keydown', function (e) {
+            if (!modal.classList.contains('open')) return;
+            if (e.key === 'Escape') closeStory();
+            else if (e.key === 'ArrowRight') document.getElementById('reel-next').click();
+            else if (e.key === 'ArrowLeft') document.getElementById('reel-prev').click();
+            else if (e.key === 'Tab') {
+                var f = $$('button, a[href], video', modal).filter(function (el) { return el.offsetParent !== null || el === closeBtn; });
+                if (!f.length) return;
+                var first = f[0], lastEl = f[f.length - 1];
+                if (e.shiftKey && document.activeElement === first) { e.preventDefault(); lastEl.focus(); }
+                else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); first.focus(); }
+            }
+        });
+        go(0); pause();
+    })();
+    </script>
+</body>
+</html>
